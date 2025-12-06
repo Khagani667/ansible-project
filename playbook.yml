@@ -1,0 +1,9 @@
+- hosts: app
+  become: yes
+  vars_files:
+    - group_vars/all/vault.yml
+  roles:
+    - database
+    - webapp
+  vars:
+    db_password: my_value
